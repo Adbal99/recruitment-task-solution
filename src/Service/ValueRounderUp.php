@@ -6,8 +6,8 @@ namespace PragmaGoTech\Interview\Service;
 
 class ValueRounderUp
 {
-    public static function roundToFiveMultiples(int|float $amount): int
+    public static function roundToFiveMultiples(int|float $amount): float
     {
-        return (int)ceil(($amount / 5)) * 5;
+        return ceil(($amount / 5)) * 5;
     }
 }
