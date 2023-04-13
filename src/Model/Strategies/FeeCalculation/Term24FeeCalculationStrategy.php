@@ -1,8 +1,6 @@
 <?php
 
-namespace PragmaGoTech\Interview\Model;
-
-use PragmaGoTech\Interview\Service\ValueRounder;
+namespace PragmaGoTech\Interview\Model\Strategies\FeeCalculation;
 
 class Term24FeeCalculationStrategy extends FeeCalculationStrategy
 {

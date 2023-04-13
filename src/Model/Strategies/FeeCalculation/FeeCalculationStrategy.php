@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PragmaGoTech\Interview\Model;
+namespace PragmaGoTech\Interview\Model\Strategies\FeeCalculation;
 
 use PragmaGoTech\Interview\Service\ValueRounder;
 
