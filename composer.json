@@ -1,12 +1,6 @@
 {
     "name": "pragmagotech/interview",
     "type": "project",
-    "authors": [
-        {
-            "name": "Piotr Ścibor",
-            "email": "piotr.scibor@pragmago.tech"
-        }
-    ],
     "autoload": {
         "psr-4": {
             "PragmaGoTech\\Interview\\": "src/"
