@@ -12,8 +12,7 @@ class LoanProposalTest extends TestCase
         $loan = new LoanProposal(12, 1000.0);
 
         $this->assertInstanceOf(LoanProposal::class, $loan);
-        $term = $loan->getTerm();
-        $this->assertEquals(12, $term);
+        $this->assertEquals(12, $loan->getTerm());
         $this->assertEquals(1000.0, $loan->getAmount());
     }
 
