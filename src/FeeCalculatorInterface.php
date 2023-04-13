@@ -6,7 +6,7 @@ namespace PragmaGoTech\Interview;
 
 use PragmaGoTech\Interview\Model\LoanProposal;
 
-interface FeeCalculator
+interface FeeCalculatorInterface
 {
     /**
      * @return float The calculated total fee.
