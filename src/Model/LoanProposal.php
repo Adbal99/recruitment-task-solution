@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PragmaGoTech\Interview\Model;
 
+use PragmaGoTech\Interview\Service\ValueRounder;
 use function PHPUnit\Framework\throwException;
 
 /**
@@ -23,7 +24,7 @@ class LoanProposal
         }
 
         $this->term = $term;
-        $this->amount = $amount;
+        $this->amount = ValueRounder::roundToFiveMultiples($amount);
     }
 
     /**
