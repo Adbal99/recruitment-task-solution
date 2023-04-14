@@ -43,4 +43,24 @@ class LoanProposal
     {
         return $this->amount;
     }
+
+    /**
+     * @param int $term
+     * @return LoanProposal
+     */
+    public function setTerm(int $term): LoanProposal
+    {
+        $this->term = $term;
+        return $this;
+    }
+
+    /**
+     * @param float $amount
+     * @return LoanProposal
+     */
+    public function setAmount(float $amount): LoanProposal
+    {
+        $this->amount = $amount;
+        return $this;
+    }
 }
