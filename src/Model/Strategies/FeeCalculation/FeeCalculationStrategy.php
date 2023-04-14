@@ -9,7 +9,7 @@ use PragmaGoTech\Interview\Service\ValueRounder;
 abstract class FeeCalculationStrategy
 {
 
-   protected array $feeStructure = [];
+    protected array $feeStructure = [];
 
     public function calculateFee(float $amount): float
     {
@@ -17,7 +17,7 @@ abstract class FeeCalculationStrategy
         $lower = $upper = null;
         foreach ($this->feeStructure as $key => $value) {
             if ($key == $amount) {
-                return $value; // If the amount is an exact data point, return its value
+                return ValueRounder::roundToFiveMultiples($value); // If the amount is an exact data point, return its value
             } elseif ($key < $amount && (!$lower || $key > $lower)) {
                 $lower = $key;
             } elseif ($key > $amount && (!$upper || $key < $upper)) {
@@ -27,9 +27,9 @@ abstract class FeeCalculationStrategy
 
         // Calculate the interpolated fee using linear interpolation
         $slope = ($this->feeStructure[$upper] - $this->feeStructure[$lower]) / ($upper - $lower);
-        $interpolated = $this->feeStructure[$lower] + ($amount - $lower) * $slope;
+        $interpolatedFee = $this->feeStructure[$lower] + ($amount - $lower) * $slope;
 
-        return ValueRounder::roundToFiveMultiples($interpolated); // Round the result and return it
+        return ValueRounder::roundToFiveMultiples($interpolatedFee); // Round the result and return it
     }
 
 }
