@@ -30,7 +30,7 @@ if (!empty($_GET['amount']) && !empty($_GET['term'])) {
 <body>
 <p>Made to check if calculates correctly</p>
 <form action="App.php" method="get">
-    <input type="number" placeholder="Loan value" name="amount" id="amount" step=".01"
+    <input type="number" placeholder="Loan amount" name="amount" id="amount" step=".01"
            value="<?= empty($_GET['amount']) ? 1000 : $_GET['amount'] ?>">
     <select name="term" id="term">
         <option <?= $_GET['term'] === '12' ? "selected" : "" ?> value="12">12</option>
